@@ -19,16 +19,24 @@ public class SystemController {
     @Autowired
     private SystemService systemService;
 
-    @RequestMapping("/demo")
-    public String demo() {
-        return "Live and Learn!";
-    }
 
+    /**
+     * 页面跳转接口
+     *
+     * @return
+     */
     @RequestMapping("/user")
     public String user() {
         return "user/index";
     }
 
+    /**
+     * 数据接口
+     * http://127.0.0.1:8080/system/userData?name=xdm
+     *
+     * @param name 用户名
+     * @return
+     */
     @RequestMapping("userData")
     @ResponseBody
     public User userData(@RequestParam(value = "name") String name) {

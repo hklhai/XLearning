@@ -6,3 +6,5 @@ CREATE TABLE `tb_user` (
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+INSERT INTO `tb_user` VALUES ('1', 'xdm', '123456');
