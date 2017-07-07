@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
-@EnableJpaRepositories(basePackages = "cn.edu.ncut.dao")
+@EnableJpaRepositories(basePackages = "cn.edu.ncut.repository")
 @EntityScan(basePackages = "cn.edu.ncut.model")
 public class JpaConfiguration {
     @Bean

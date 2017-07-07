@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class AppSelfApplication extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
 
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         SpringApplication.run(AppSelfApplication.class, args);
     }
 

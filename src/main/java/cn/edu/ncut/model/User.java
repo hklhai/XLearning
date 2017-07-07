@@ -18,6 +18,9 @@ public class User {
         return id;
     }
 
+    public User() {
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }

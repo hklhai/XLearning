@@ -1,6 +1,6 @@
 package cn.edu.ncut.service;
 
-import cn.edu.ncut.dao.UserDao;
+import cn.edu.ncut.repository.UserRepository;
 import cn.edu.ncut.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class SystemService {
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userDao;
 
     public User findUserById(String name)
     {
