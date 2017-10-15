@@ -1,4 +1,4 @@
-package cn.edu.ncut;
+package cn.edu.ncut.controller;
 
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
@@ -18,11 +18,12 @@ public class ESConfig {
     @Bean
     public TransportClient client() throws UnknownHostException {
         InetSocketTransportAddress node1 = new InetSocketTransportAddress(
-                InetAddress.getByName("http://elasticsearch1"), 9300
+                InetAddress.getByName("192.168.89.161"), 9300
         );
         //可以new 三个节点，将node1放入,还可以放入node2...
 
-        Settings settings = Settings.builder().put("cluster.name", "es-hk").build();
+        Settings settings = Settings.builder().put("cluster.name", "es-hk")
+                .put("client.transport.sniff",true).build();
 
         TransportClient client = new PreBuiltTransportClient(settings);
         client.addTransportAddress(node1);
