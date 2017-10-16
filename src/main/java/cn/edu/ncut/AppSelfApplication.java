@@ -40,8 +40,7 @@ import java.util.concurrent.ExecutionException;
 public class AppSelfApplication extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
 
 
-    @Autowired
-    private TransportClient client;
+
 
     public static void main(String[] args) {
         SpringApplication.run(AppSelfApplication.class, args);
