@@ -15,15 +15,18 @@ import java.net.UnknownHostException;
  */
 @Configuration
 public class ESConfig {
+
+    private static final String HOST = "127.0.0.1";
+    private static final String CLUSTER_NAME = "elasticsearch";
+
     @Bean
     public TransportClient client() throws UnknownHostException {
         InetSocketTransportAddress node1 = new InetSocketTransportAddress(
-                InetAddress.getByName("192.168.89.161"), 9300
-        );
-        //可以new 三个节点，将node1放入,还可以放入node2...
+                InetAddress.getByName(HOST), 9300);
 
-        Settings settings = Settings.builder().put("cluster.name", "es-hk")
-                .put("client.transport.sniff",true).build();
+        //可以new 三个节点，将node1放入,还可以放入node2...
+        Settings settings = Settings.builder().put("cluster.name", CLUSTER_NAME)
+                .put("client.transport.sniff", true).build();
 
         TransportClient client = new PreBuiltTransportClient(settings);
         client.addTransportAddress(node1);
