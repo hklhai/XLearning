@@ -44,13 +44,13 @@ public class ActivitiController {
         runtimeService.setVariable(task.getExecutionId(), "productid", "10001");
         System.out.println("第一次执行前，任务名称：" + task.getName());
         taskService.complete(task.getId());
-
-        task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
-        System.out.println("第二次执行前，任务名称：" + task.getName());
-        taskService.complete(task.getId());
-
-        task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
-        System.out.println("task为null，任务执行完毕：" + task);
+//
+//        task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
+//        System.out.println("第二次执行前，任务名称：" + task.getName());
+//        taskService.complete(task.getId());
+//
+//        task = taskService.createTaskQuery().processInstanceId(processId).singleResult();
+//        System.out.println("task为null，任务执行完毕：" + task);
 
     }
 
