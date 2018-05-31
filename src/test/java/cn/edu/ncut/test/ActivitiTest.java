@@ -23,8 +23,8 @@ import java.util.List;
  * Created by Ocean lin on 2017/7/3.
  */
 
-@SpringBootTest
-@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringBootTest
+//@RunWith(SpringJUnit4ClassRunner.class)
 public class ActivitiTest {
     @Resource
     private RepositoryService repositoryService;
